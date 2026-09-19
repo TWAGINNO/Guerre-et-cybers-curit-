@@ -425,18 +425,18 @@
       </div>
     </section>
 
-    <section class="comments">
+    <section class="comments" id="comments">
       <h3 class="lang-fr">Commentaires</h3>
       <h3 class="lang-en">Comments</h3>
-      <p class="comments-count lang-fr">3 commentaires</p>
-      <p class="comments-count lang-en">3 comments</p>
-      <div class="comment">
+      <p class="comments-count lang-fr">3 commentaires + discussion ouverte</p>
+      <p class="comments-count lang-en">3 comments + open discussion</p>
+
+      <div class="comment" style="margin-top:24px;">
         <div class="comment-avatar">M</div>
         <div class="comment-body">
           <div class="comment-meta"><strong>Marie L.</strong> <span>19 sept. 2026 · 14:32</span></div>
           <p class="comment-text lang-fr">Excellente analyse. La question des dépendances fournisseurs est encore trop souvent traitée de façon cosmétique dans les démarches GRC.</p>
           <p class="comment-text lang-en">Excellent analysis. Supplier dependency issues are still too often treated cosmetically in GRC approaches.</p>
-          <button class="reply-btn">RÉPONDRE</button>
         </div>
       </div>
       <div class="comment">
@@ -445,7 +445,6 @@
           <div class="comment-meta"><strong>Thomas R.</strong> <span>19 sept. 2026 · 15:10</span></div>
           <p class="comment-text lang-fr">Le passage sur le basculement de la sécurité vers la résilience résonne particulièrement avec ce que l’on observe sur le terrain.</p>
           <p class="comment-text lang-en">The shift from security to resilience particularly resonates with what we observe in the field.</p>
-          <button class="reply-btn">RÉPONDRE</button>
         </div>
       </div>
       <div class="comment">
@@ -454,15 +453,37 @@
           <div class="comment-meta"><strong>Sophie D.</strong> <span>19 sept. 2026 · 16:45</span></div>
           <p class="comment-text lang-fr">Très pertinent de lier explicitement la supply chain et la dimension géopolitique.</p>
           <p class="comment-text lang-en">Very relevant to explicitly link the supply chain and the geopolitical dimension.</p>
-          <button class="reply-btn">RÉPONDRE</button>
         </div>
       </div>
-      <div class="comment-form">
-        <h4 class="lang-fr">Laisser un commentaire</h4>
-        <h4 class="lang-en">Leave a comment</h4>
-        <textarea placeholder="Votre commentaire..."></textarea>
-        <button class="submit-comment" onclick="alert('Commentaire envoyé (démo). Merci !')">ENVOYER</button>
-      </div>
+
+      <p class="lang-fr" style="margin:28px 0 12px;font-size:0.95rem;color:var(--text-muted);">Continuer la discussion via GitHub :</p>
+      <p class="lang-en" style="margin:28px 0 12px;font-size:0.95rem;color:var(--text-muted);">Continue the discussion via GitHub:</p>
+
+      <!-- Giscus : commentaires via GitHub Discussions -->
+      <!-- 
+        1. Active "Discussions" dans ton dépôt (Settings → Features)
+        2. Va sur https://giscus.app
+        3. Remplace data-repo, data-repo-id et data-category-id ci-dessous
+      -->
+      <script src="https://giscus.app/client.js"
+        data-repo="TON-USERNAME/NOM-DU-REPO"
+        data-repo-id="REMPLACE_PAR_REPO_ID"
+        data-category="Commentaires"
+        data-category-id="REMPLACE_PAR_CATEGORY_ID"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="fr"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+      </script>
+
+      <noscript class="lang-fr">Active JavaScript pour voir les commentaires (Giscus).</noscript>
+      <noscript class="lang-en">Enable JavaScript to view comments (Giscus).</noscript>
     </section>
 
     <section class="newsletter">
